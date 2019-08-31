@@ -2,4 +2,4 @@
 
 Research project started on June 25th 2019, under the mentorship of professor J Kenneth Salisbury.
 
-Authors of paper: Jason Ah Chuen, Akram Sbaih
+Authors of paper (in progress): Jason Ah Chuen, Akram Sbaih
