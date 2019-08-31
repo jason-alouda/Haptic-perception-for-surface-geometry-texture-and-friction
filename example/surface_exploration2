@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Aug 26 10:39:26 2019
+
+@author: jasonahchuen
+"""
+
+from two_scans import run_scan
+from data_analysis import run_analysis
+from plotting_scan import run_geometry
+
+def run_exploration():
+    run_scan()
+    KNN_predicted, multinomial_predicted, freq = run_analysis()
+    
+    # If object has a repeating geometry, predict geometry of surface using its first and second derivatives
+        
+    if (KNN_predicted == 0 or KNN_predicted == 1 or multinomial_predicted == 'FS' or multinomial_predicted == 'FR'):
+        print("No repeating geometry found. This is likely to be a flat surface")
+        pass
+    else:
+        print("Repeating geometry without an approximate spatial frequency of %2.2f found. Analyzing geometry scan..." % (freq))
+        run_geometry()
+
+if __name__ == '__main__':
+    run_exploration()
