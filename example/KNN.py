@@ -51,7 +51,7 @@ surface = le.fit_transform(surface)
 features=list(zip(std1,std2,std3,amp, freq))
 
 # Build KNN classifier model
-model = KNeighborsClassifier(n_neighbors=2)
+model = KNeighborsClassifier(n_neighbors=1)
 
 # Train the model using the training sets
 model.fit(features,surface)
